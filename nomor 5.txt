@@ -1,0 +1,31 @@
+#include <iostream>
+
+#include <string.h>
+
+
+
+using namespace std;
+
+
+
+int main()
+{
+	int i=0;
+	int hurufhidup=0;
+	int x;
+	char teks[20];
+
+	cout <<"Masukkan kalimat : ";
+
+	cin.getline(teks,250);
+	x=strlen(teks);
+	for(i=0;i<x;i++)
+	{
+		if(teks[i]=='a'||teks[i]=='i'||teks[i]=='u'||teks[i]=='e'||teks[i]=='o')
+		hurufhidup++;
+	}
+	cout<<"Jumlah huruf hidup : "<<hurufhidup<<" huruf"<<endl;
+ return 0;
+
+
+}

@@ -1,0 +1,42 @@
+#include <iostream>
+#include <algorithm>
+#include <cstring>
+
+using namespace std;
+
+int main()
+{
+    int j,k=3;
+    string data;
+    getline(cin,data);
+    char hapus[] = "-";
+
+
+    for(unsigned int i=0;i<strlen(hapus);++i)
+    {
+        data.erase (remove(data.begin(), data.end(), hapus[i]), data.end());
+    }
+
+    j=data.length();
+    if(j%3==0){
+        k=1;
+    }
+    if(k==3){
+      data.insert(j-2,"-");
+    }
+    
+    
+    for(int i=0;i<j-k;i++){
+        j=data.length();
+        
+            if((i+1) % 4 ==0){
+                data.insert(i,"-");
+                
+               
+                
+            }
+        
+    }
+    cout<<"setelah dihilangkan: "<<data<<endl;
+    return 0;
+}
